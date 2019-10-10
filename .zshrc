@@ -100,5 +100,5 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=vim
 
 # If not running interactively, do not do anything
-[[ $- != *i* ]] && return
-[[ -z "$TMUX" ]] && exec tmux
+#[[ $- != *i* ]] && return
+#[[ -z "$TMUX" ]] && exec tmux
