@@ -9,6 +9,9 @@ set number
 " wrap the long line
 set wrap
 
+" resolve the vim tmux color problem
+set background=dark
+
 " Don't use Arrow Keys anymore!
 noremap <Up> <Nop>
 noremap <Down> <Nop>
