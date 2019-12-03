@@ -300,3 +300,6 @@ bind C-b send-prefix
 #set -g status-position top
 
 set-option -g default-shell /usr/bin/zsh
+
+# set | as split vertically
+bind | split-window -h
