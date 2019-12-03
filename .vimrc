@@ -42,8 +42,10 @@ endif
 Plug 'junegunn/seoul256.vim' " Change vim color
 Plug 'scrooloose/nerdtree'   " file browser
 Plug 'dense-analysis/ale'    " linter and correcter
-Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'    " git support
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' } " in plugged/you.. do 'python3 install install.py --clangd-completer'
+Plug 'sheerun/vim-polyglot'  " syntax support
+Plug 'tpope/vim-surround'    " pairing
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
