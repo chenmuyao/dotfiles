@@ -15,6 +15,9 @@ set background=dark
 " Solve the paste - autoindent problem
 set pastetoggle=<F2>
 
+" Enable mouse
+set mouse=a
+
 " Don't use Arrow Keys anymore!
 noremap <Up> <Nop>
 noremap <Down> <Nop>
