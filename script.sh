@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install zsh tmux xsel xclip nvim git 
+sudo apt install zsh tmux xsel xclip neovim git 
 # sudo apt install cscope ctags
 
 git clone https://github.com/gpakosz/.tmux.git $HOME/.tmux
