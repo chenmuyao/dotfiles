@@ -36,8 +36,9 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Declare the list of plugins.
-
-Plug 'tpope/vim-sensible'
+if !has('nvim')
+    Plug 'tpope/vim-sensible'
+endif
 Plug 'junegunn/seoul256.vim' " Change vim color
 Plug 'scrooloose/nerdtree'   " file browser
 Plug 'dense-analysis/ale'    " linter and correcter
