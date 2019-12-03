@@ -46,7 +46,7 @@ Plug 'tpope/vim-fugitive'    " git support
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' } " in plugged/you.. do 'python3 install install.py --clangd-completer'
 Plug 'sheerun/vim-polyglot'  " syntax support
 Plug 'tpope/vim-surround'    " pairing
-
+Plug 'raimondi/delimitmate'  " auto-close
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
