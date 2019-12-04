@@ -44,8 +44,9 @@ if !has('nvim')
 endif
 Plug 'junegunn/seoul256.vim' " Change vim color
 Plug 'scrooloose/nerdtree'   " file browser
-Plug 'dense-analysis/ale'    " linter and correcter
+  Plug 'Xuyuanp/nerdtree-git-plugin' " Git integration for nerdtree
 Plug 'tpope/vim-fugitive'    " git support
+Plug 'dense-analysis/ale'    " linter and correcter
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' } " in plugged/you.. do 'python3 install install.py --clangd-completer'
 Plug 'sheerun/vim-polyglot'  " syntax support
 Plug 'tpope/vim-surround'    " pairing
@@ -67,8 +68,15 @@ colo seoul256
 " Config nerdtree
 let NERDTreeShowHidden=1  "  Always show dot files
 let NERDTreeQuitOnOpen=1
-map  <Leader>n  :NERDTreeFind<CR>
+let NERDTreeHighlightCursorline=1
+" Toggle between NerdTree and the current file
+nnoremap  <Leader>n  :NERDTreeToggle<CR> 
+" locate the actual file in NerdTree
+nnoremap <silent> <Leader>f :NERDTreeFind<CR>
 "autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif " quit vim if nerdtree is the only buffer opened
+" start nerdtree if no file specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
-" Config deoplete
-let g:deoplete#enable_at_startup = 1
+" Config fugitive
