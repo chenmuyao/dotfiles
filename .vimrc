@@ -24,6 +24,16 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+" Use <C-L> to clear the highlighting of :set hlsearch.
+if maparg('<C-L>', 'n') ==# ''
+  nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+endif
+
+" moving from tab to tab more logically
+nnoremap <C-W><C-L> :tabnext<CR>
+nnoremap <C-W><C-H> :tabprevious<CR>
+
+
 set tabstop=2 shiftwidth=2 expandtab " The width of a TAB is set to 2.
 
 " nvim specific configs
@@ -46,11 +56,17 @@ Plug 'junegunn/seoul256.vim' " Change vim color
 Plug 'scrooloose/nerdtree'   " file browser
   Plug 'Xuyuanp/nerdtree-git-plugin' " Git integration for nerdtree
 Plug 'tpope/vim-fugitive'    " git support
+Plug 'airblade/vim-gitgutter' " git in live
 Plug 'dense-analysis/ale'    " linter and correcter
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' } " in plugged/you.. do 'python3 install install.py --clangd-completer'
 Plug 'sheerun/vim-polyglot'  " syntax support
 Plug 'tpope/vim-surround'    " pairing
 Plug 'raimondi/delimitmate'  " auto-close
+
+" Plug 'mbbill/undotree'
+" Plug 'tpope/vim-unimpaired'
+" Plug 'editorconfig/editorconfig-vim'
+
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
@@ -69,6 +85,8 @@ colo seoul256
 let NERDTreeShowHidden=1  "  Always show dot files
 let NERDTreeQuitOnOpen=1
 let NERDTreeHighlightCursorline=1
+
+let NERDTreeCustomOpenArgs={'file':{'where': 't'}, 'dir':{}}
 " Toggle between NerdTree and the current file
 nnoremap  <Leader>n  :NERDTreeToggle<CR> 
 " locate the actual file in NerdTree
