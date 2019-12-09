@@ -62,6 +62,7 @@ Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' } " in plugged/you.. do 'p
 Plug 'sheerun/vim-polyglot'  " syntax support
 Plug 'tpope/vim-surround'    " pairing
 Plug 'raimondi/delimitmate'  " auto-close
+Plug 'vim-scripts/fcitx.vim'  " chinese input method
 
 " Plug 'mbbill/undotree'
 " Plug 'tpope/vim-unimpaired'
