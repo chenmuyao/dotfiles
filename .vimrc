@@ -63,6 +63,7 @@ Plug 'sheerun/vim-polyglot'  " syntax support
 Plug 'tpope/vim-surround'    " pairing
 Plug 'raimondi/delimitmate'  " auto-close
 Plug 'vim-scripts/fcitx.vim'  " chinese input method
+Plug 'tpope/vim-obsession'  " save vim sessions
 
 " Plug 'mbbill/undotree'
 " Plug 'tpope/vim-unimpaired'
