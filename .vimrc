@@ -24,6 +24,9 @@ noremap <Down> <Nop>
 noremap <Left> <Nop>
 noremap <Right> <Nop>
 
+nnoremap j gj
+nnoremap k gk
+
 " Use <C-L> to clear the highlighting of :set hlsearch.
 if maparg('<C-L>', 'n') ==# ''
   nnoremap <silent> <C-L> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
@@ -64,6 +67,7 @@ Plug 'tpope/vim-surround'    " pairing
 Plug 'raimondi/delimitmate'  " auto-close
 Plug 'vim-scripts/fcitx.vim'  " chinese input method
 Plug 'tpope/vim-obsession'  " save vim sessions
+Plug 'junegunn/goyo.vim'    " focus mode
 
 " Plug 'mbbill/undotree'
 " Plug 'tpope/vim-unimpaired'
